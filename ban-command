@@ -1,0 +1,195 @@
+{
+  "name": "ban",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "BmJRP",
+  "actions": [
+    {
+      "member": "1",
+      "varName": "",
+      "permission": "BAN_MEMBERS",
+      "iftrue": "2",
+      "iftrueVal": "6",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Member Permissions"
+    },
+    {
+      "title": "Invalid Permissions",
+      "author": "",
+      "color": "RED",
+      "timestamp": "false",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "invalid.permissions.embed",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "invalid.permissions.embed",
+      "message": "Sorry, but in order to ban members you have to have the Ban Members permission.",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "invalid.permissions.embed",
+      "channel": "0",
+      "varName2": "",
+      "storage3": "0",
+      "varName3": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "condition": "1",
+      "comparison": "0",
+      "value": "1",
+      "iftrue": "2",
+      "iftrueVal": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Parameters"
+    },
+    {
+      "title": "Invalid Mention",
+      "author": "",
+      "color": "RED",
+      "timestamp": "false",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "invalid.mentions.embed",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "invalid.mentions.embed",
+      "message": "Please mention one user in order to ban them!\n[p]ban {@member} {reason}",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "invalid.mentions.embed",
+      "channel": "0",
+      "varName2": "",
+      "storage3": "0",
+      "varName3": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "permission": "BAN_MEMBERS",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "16",
+      "name": "Check Member Permissions"
+    },
+    {
+      "title": "Error Banning User #3",
+      "author": "",
+      "color": "RED",
+      "timestamp": "false",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "error.banning.user.3.embed",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "error.banning.user.3.embed",
+      "message": "The member mentioned has the \"Ban Members\" permission.\nThis means, he can not be banned unless you remove those permissions from him.",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "error.banning.user.3.embed",
+      "channel": "0",
+      "varName2": "",
+      "storage3": "0",
+      "varName3": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "info": "1",
+      "infoIndex": "3",
+      "storage": "1",
+      "varName": "reason",
+      "name": "Store Command Params"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "info": "2",
+      "storage": "1",
+      "varName2": "banned.username.not.done",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "info": "0",
+      "storage": "2",
+      "varName2": "banned.${tempVars(\"banned.username.not.done\")}",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "reason": "${tempVars(\"reason\")}",
+      "name": "Ban Member"
+    },
+    {
+      "title": "Banned Successfully",
+      "author": "",
+      "color": "GREEN",
+      "timestamp": "true",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "ban.success.embed",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "ban.success.embed",
+      "message": "${mentionedUser} has been banned successfully.",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "ban.success.embed",
+      "message": "Ban command by Tristen#3979",
+      "footerIcon": "https://cdn.discordapp.com/attachments/562429832076722187/566791581600972820/tristen_profile_picture.jpg",
+      "name": "Set Embed Footer"
+    },
+    {
+      "storage": "1",
+      "varName": "ban.success.embed",
+      "channel": "0",
+      "varName2": "",
+      "storage3": "0",
+      "varName3": "",
+      "name": "Send Embed Message"
+    }
+  ]
+}
